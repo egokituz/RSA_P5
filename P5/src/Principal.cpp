@@ -1,5 +1,8 @@
 /*
  * Ejemplos para aprender a usar correctamente la clase Laberinto y sus estructuras
+ * 
+ * Author: @JulioAbascal
+ * Author: @xabigarde
  */
 
 #include "Laberinto.h"
@@ -21,7 +24,7 @@ int main(int argc, char * argv[]){
     cout << "Escribe un número del 1 al 4 para ejecutar un ejemplo:\n\r" 
          << "\t 1 - Ejemplo 1\n\r"
          << "\t 2 - Ejemplo 2\n\r"
-         << "\t 3 - Ejemplo 3 usando Rejilla.xml\n\r"
+         << "\t 3 - Ejemplo 3 usando Rejilla.xml\n\r   "
          << "\t 4 - Ejemplo 3 usando Laberinto.xml\n\r" 
          << endl; 
     while(!(ejemplo = getch(500))); //espera a que se pulse una tecla
