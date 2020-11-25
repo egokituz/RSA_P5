@@ -6,7 +6,7 @@
 using namespace std;
 
 /**
-*	Constructora sin par�metros
+*	Constructora sin parámetros
 */
 Laberinto::Laberinto(void)
 {
@@ -41,9 +41,9 @@ Laberinto::Laberinto(const char* pFilename)
 /**
 *	Constructora 
 * 		Const char* pFilename: Fichero XML con un laberinto codificado
-*		int x: posici�n del robot en el eje horizontal
-*		int y: posici�n del robot en el eje vertical  
-*		char orientaci�n: {NORTE, SUR, ESTE, OESTE}
+*		int x: posición del robot en el eje horizontal
+*		int y: posición del robot en el eje vertical  
+*		char orientación: {NORTE, SUR, ESTE, OESTE}
 */
 Laberinto::Laberinto(const char* pFilename, int x, int y, char orientacion){
 	cargarLaberinto(pFilename);
@@ -154,8 +154,8 @@ void Laberinto::procesarNodos( TiXmlHandle * hParent){
 /**
 *	Recorre todos los caminos de un nodo en el fichero XML  y actualiza los valores arriba, abajo, izquierda, derecha de Matriz
 *		TiXmlHandle * hNodo: Puntero a un elemento "Nodo" del fichero XML
-*		int pos_x:	Posici�n en el eje horizontal del nodo
-*		int pos_y:	Posici�n en el eje vertical del nodo
+*		int pos_x:	posición en el eje horizontal del nodo
+*		int pos_y:	posición en el eje vertical del nodo
 */
 void Laberinto::procesarCaminos( TiXmlHandle *hNodo, int pos_x, int pos_y){
 
@@ -192,9 +192,9 @@ void Laberinto::procesarCaminos( TiXmlHandle *hNodo, int pos_x, int pos_y){
 
 /**
 *	Asocia un nodo del laberinto/matriz al Robot
-*		int pos_x:	Posici�n en el eje horizontal del nodo
-*		int pos_y:	Posici�n en el eje vertical del nodo
-*		char orientacion: Orientaci�n en la que parte el robot
+*		int pos_x:	posición en el eje horizontal del nodo
+*		int pos_y:	posición en el eje vertical del nodo
+*		char orientacion: Orientación en la que parte el robot
 */
 void Laberinto::situarRobot(int pos_x, int pos_y, char orientacion){
 	iCreate.nodo_actual = &matriz[pos_x][pos_y];
@@ -202,10 +202,10 @@ void Laberinto::situarRobot(int pos_x, int pos_y, char orientacion){
 }
 
 /**
-*	Devuelve la posici�n del robot en el laberinto
+*	Devuelve la posición del robot en el laberinto
 *		int* pos_x:	Guarda el valor del eje horizontal
 *		int* pos_y:	Guarda el valor del eje vertical
-*		char* orientacion: Guarda la orientaci�n del robot
+*		char* orientacion: Guarda la orientación del robot
 */
 void Laberinto::getPosRobot(int *pos_x, int *pos_y, char * orientacion){
 	*pos_x = iCreate.nodo_actual->x;
@@ -214,7 +214,7 @@ void Laberinto::getPosRobot(int *pos_x, int *pos_y, char * orientacion){
 }
 
 /**
-*	Consulta si el robot tiene la siguiente posici�n al sur disponible
+*	Consulta si el robot tiene la siguiente posición al sur disponible
 *		return bool: true si hay un nodo al Sur
 */
 bool Laberinto::esSurLibre(){
@@ -222,7 +222,7 @@ bool Laberinto::esSurLibre(){
 }
 
 /**
-*	Consulta si el robot tiene la siguiente posici�n al norte disponible
+*	Consulta si el robot tiene la siguiente posición al norte disponible
 *		return bool: true si hay un nodo al Norte
 */
 bool Laberinto::esNorteLibre(){
@@ -230,7 +230,7 @@ bool Laberinto::esNorteLibre(){
 }
 
 /**
-*	Consulta si el robot tiene la siguiente posici�n al este disponible
+*	Consulta si el robot tiene la siguiente posición al este disponible
 *		return bool: true si hay un nodo al Este
 */
 bool Laberinto::esEsteLibre(){
@@ -238,7 +238,7 @@ bool Laberinto::esEsteLibre(){
 }
 
 /**
-*	Consulta si el robot tiene la siguiente posici�n al oeste disponible
+*	Consulta si el robot tiene la siguiente posición al oeste disponible
 *		return bool: true si hay un nodo al Oeste
 */
 bool Laberinto::esOesteLibre(){
@@ -246,36 +246,36 @@ bool Laberinto::esOesteLibre(){
 }
 
 /**
-*	Orienta el robot hacia la direcci�n Norte en el mapa
+*	Orienta el robot hacia la dirección Norte en el mapa
 */
 void Laberinto::orientarRobotNorte(){
 	iCreate.orientacion=NORTE;
 }
 
 /**
-*	Orienta el robot hacia la direcci�n Sur en el mapa
+*	Orienta el robot hacia la dirección Sur en el mapa
 */
 void Laberinto::orientarRobotSur(){
 	iCreate.orientacion=SUR;
 }
 
 /**
-*	Orienta el robot hacia la direcci�n Este en el mapa
+*	Orienta el robot hacia la dirección Este en el mapa
 */
 void Laberinto::orientarRobotEste(){
 	iCreate.orientacion=ESTE;
 }
 
 /**
-*	Orienta el robot hacia la direcci�n Oeste en el mapa
+*	Orienta el robot hacia la dirección Oeste en el mapa
 */
 void Laberinto::orientarRobotOeste(){
 	iCreate.orientacion=OESTE;
 }
 
 /**
-*	A�ade un nodo visitado en el camino del robot
-*		robot *aux: la estructura con la informaci�n de la posici�n del robot
+*	Añade un nodo visitado en el camino del robot
+*		robot *aux: la estructura con la información de la posición del robot
 */
 void Laberinto::modificarCamino(robot *aux){
 	
@@ -376,7 +376,7 @@ int Laberinto::avanzaOeste(){
 }
 
 /**
-*	Muestra por pantalla el laberinto y la posici�n del robot
+*	Muestra por pantalla el laberinto y la posición del robot
 */
 void Laberinto::imprimirLaberinto(){
 	cout<<"Imprimiendo: "<< nombre << " Dimensiones x: "<< dim_x << " y: " << dim_y <<"\r" << endl;
@@ -484,26 +484,26 @@ void Laberinto::imprimirLaberinto(){
 }
 
 /**
-*	M�todo que obtiene el camino entre un nodo de entrada [x_orig, y_orig] y un nodo de 
+*	Método que obtiene el camino entre un nodo de entrada [x_orig, y_orig] y un nodo de 
 *	salida [x_dest, y_dest].  
-*		int x_orig: Posici�n origen del robot en la Matriz del laberinto
-*		int y_orig: Posici�n origen del robot en la Matriz del laberinto
-*		int x_dest: Posici�n destino del robot en la Matriz del laberinto
-*		int y_dest: Posici�n destino del robot en la Matriz del laberinto
+*		int x_orig: posición origen del robot en la Matriz del laberinto
+*		int y_orig: posición origen del robot en la Matriz del laberinto
+*		int x_dest: posición destino del robot en la Matriz del laberinto
+*		int y_dest: posición destino del robot en la Matriz del laberinto
 *		return camino*: Apuntador a una estructura tipo camino con la solucion
 */
 camino*  Laberinto::encontrarCamino(int x_orig, int y_orig, int x_dest, int y_dest){
 	struct camino* solucion  = (struct camino *) malloc (sizeof(camino));
 	
-	// ... A COMPLETAR EN LA PR�CTICA
+	// ... A COMPLETAR EN LA PRÁCTICA
 	
 	return solucion;
 }
 
 /**
-*	Funci�n que a�ade un nodo nuevo a un camino 
+*	Función que añade un nodo nuevo a un camino 
 *		camino **cam: Puntero doble a la estructura camino que se va a modificar
-*		nodo **aux: Puntero doble al nodo que se quiere a�adir en el camino
+*		nodo **aux: Puntero doble al nodo que se quiere añadir en el camino
 */
 void Laberinto::modificarCamino(camino** cam, nodo **aux){
 	
@@ -518,7 +518,7 @@ void Laberinto::modificarCamino(camino** cam, nodo **aux){
 }
 
 /**
-*	Muestra por pantalla el camino que se pasa por par�metro
+*	Muestra por pantalla el camino que se pasa por parámetro
 *		camino *first_element: Primer elemento de una lista del tipo camino
 */
 void Laberinto::imprimirCamino(camino *first_element){

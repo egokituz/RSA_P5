@@ -1,5 +1,5 @@
 /** 
-*	Versi�n del algoritmo sigue l�neas para 3 estados usando 1 sensor de Cliff
+*	Versión del algoritmo sigue líneas para 3 estados usando 1 sensor de Cliff
 */
 
 #include "ControlRobot.h"

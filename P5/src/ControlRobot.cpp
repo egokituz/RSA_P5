@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Estados de la l�gica
+// Estados de la lógica
 #define INICIAL 5
 #define SIGUE 1
 #define BUSCA 0
@@ -35,7 +35,7 @@ ControlRobot::~ControlRobot(void)
 }
 
 /**
-* 	Prepara la conexi�n IRobotConnection e inicializa todas
+* 	Prepara la conexión IRobotConnection e inicializa todas
 *	las variables que necesitemos en el programa
 */
 void ControlRobot::inicializacion(void)
@@ -44,7 +44,7 @@ void ControlRobot::inicializacion(void)
 	int COM_port;
 	char puerto[30];
 	
-	// Solicitamos el puerto COM por entrada est�ndar
+	// Solicitamos el puerto COM por entrada estándar
 	//cout << "Puerto COM: ";
 	//cin >> COM_port;
 	//sprintf(puerto, "COM%d",COM_port);
@@ -54,7 +54,7 @@ void ControlRobot::inicializacion(void)
 
 	robot = new IRobotConnection(puerto);
 	
-	// Iniciamos la conexi�n
+	// Iniciamos la conexión
 	cout << "Connecting... ";
 	robot->connect();
 	cout << "Done!!\n\r" << endl;
@@ -77,7 +77,7 @@ void ControlRobot::inicializacion(void)
 * 	Calcula si se han dado las condiciones necesarias para terminar el programa
 *	return bool: 
 *		- true para terminar
-*		- false para continuar al menos un ciclo m�s
+*		- false para continuar al menos un ciclo más
 */
 bool ControlRobot::condicionSalida()
 {
@@ -85,20 +85,20 @@ bool ControlRobot::condicionSalida()
 }
 
 /**
-*	Obtiene y trata la informaci�n de los sensores relevantes al programa, 
+*	Obtiene y trata la información de los sensores relevantes al programa, 
 *	para ello usa la struct Sensores_iCreate sensores;
 */
 void ControlRobot::leerSensores()
 {
 	sensores.front_left = robot->updateSensor(iRobotSensors::CLIFFFRONTLEFTSIGNAL );
-	// Ajustamos el valor al m�ximo permitido por la especificaci�n OI
+	// Ajustamos el valor al máximo permitido por la especificación OI
 	if(sensores.front_left>4095) sensores.front_left=4095;
 	
 	sensores.fl = DUCT_TAPE(sensores.front_left);
 }
 
 /**
-*	Contiene la l�gica del programa
+*	Contiene la lógica del programa
 */
 void ControlRobot::logicaEstados()
 {		
@@ -126,8 +126,8 @@ void ControlRobot::logicaEstados()
 }
 
 /**
-*  	Activa los actuadores correspondientes en funci�n de lo decidido 
-*	en la l�gica del programa 
+*  	Activa los actuadores correspondientes en función de lo decidido 
+*	en la lógica del programa 
 */
 void ControlRobot::moverActuadores()
 {
@@ -155,7 +155,7 @@ void ControlRobot::moverActuadores()
 }
 
 /**
-*	Muestra informaci�n relevante al usuario
+*	Muestra información relevante al usuario
 */
 void ControlRobot::imprimirInfo(void)
 {
