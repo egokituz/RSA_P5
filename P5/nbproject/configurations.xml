@@ -25,7 +25,6 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/ControlRobot.cpp</itemPath>
-      <itemPath>src/Ejemplo.cpp</itemPath>
       <itemPath>src/IRobotConnection.cpp</itemPath>
       <itemPath>src/IRobotInstructionSet.cpp</itemPath>
       <itemPath>src/Instruction.cpp</itemPath>
@@ -72,8 +71,6 @@
       <item path="src/ControlRobot.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ControlRobot.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/Ejemplo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/IRobotConnection.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -139,8 +136,6 @@
       <item path="src/ControlRobot.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ControlRobot.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/Ejemplo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/IRobotConnection.cpp" ex="false" tool="1" flavor2="0">
       </item>
