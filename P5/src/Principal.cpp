@@ -25,14 +25,16 @@ int main(int argc, char * argv[]){
          << "\t 1 - Ejemplo 1\n\r"
          << "\t 2 - Ejemplo 2\n\r"
          << "\t 3 - Ejemplo 3 usando Rejilla.xml\n\r   "
-         << "\t 4 - Ejemplo 3 usando Laberinto.xml\n\r" 
+         << "\t 4 - Ejemplo 3 usando Laberinto_interior.xml\n\r" 
+         << "\t 5 - Ejemplo 3 usando Laberinto_exterior.xml\n\r" 
          << endl; 
     while(!(ejemplo = getch(500))); //espera a que se pulse una tecla
     switch(ejemplo){
         case '1': ejemplo1();break;
         case '2': ejemplo2();break;
         case '3': ejemplo3("xml/Rejilla.xml");break;
-        case '4': ejemplo3("xml/Laberinto.xml");break;
+        case '4': ejemplo3("xml/Laberinto_interior.xml");break;
+        case '5': ejemplo3("xml/Laberinto_exterior.xml");break;
         default: cout << "número no reconocido\r" << endl; break;
     }
     

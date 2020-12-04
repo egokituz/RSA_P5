@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Laberinto nombre="Laberinto" dim_x="6" dim_y="6"><style class="darkreader darkreader--fallback">html, body, body :not(iframe) { background-color: #181a1b !important; border-color: #776e62 !important; color: #e8e6e3 !important; }</style><script/>
+<Laberinto nombre="Laberinto" dim_x="6" dim_y="6">
     <Nodo x="0" y="0">
 		<Camino dir="abajo"/>
 	</Nodo>
